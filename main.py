@@ -16,7 +16,7 @@ def load_graph(path):
 
 
 if __name__ == "__main__":
-    U = load_graph("graphs/Tree(A).yaml")
-    V = load_graph("graphs/Tree(B).yaml")
+    U = load_graph("graphs/C6.yaml")
+    V = load_graph("graphs/C6(non-Isomorph).yaml")
 
     print(isomorph(U, V))
