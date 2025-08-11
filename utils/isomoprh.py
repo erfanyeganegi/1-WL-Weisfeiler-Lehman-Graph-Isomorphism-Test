@@ -10,7 +10,7 @@ def isomorph(u: Graph, v: Graph) -> int:
     cu, histc = wl(u)
     cv, histv = wl(v)
 
-    if len(histc != histv:
+    if histc != histv:
         return 0
 
     return 1
