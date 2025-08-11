@@ -7,10 +7,10 @@ def isomorph(u: Graph, v: Graph) -> int:
     if u.order() != v.order() or u.size() != v.size():
         return 0
 
-    cu = wl(u)
-    cv = wl(v)
+    cu, histc = wl(u)
+    cv, histv = wl(v)
 
-    if cu.colors_historgram != cv.colors_historgram:
+    if len(histc != histv:
         return 0
 
     return 1

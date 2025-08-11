@@ -6,10 +6,12 @@ from utils.signature import signature
 
 def wl(g: Graph) -> Coloring:
     c = Coloring()
+    histograms = []
 
     while True:
         signatures = {}
         old_partition = c.partition()
+        histograms.append(c.color_histogram())
 
         for u in g.nodes:
             signatures[u] = signature(g, c, u)
@@ -20,4 +22,4 @@ def wl(g: Graph) -> Coloring:
         if c.partition() == old_partition:
             break
 
-    return c
+    return c, histograms
