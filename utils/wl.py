@@ -11,7 +11,7 @@ def wl(g: Graph) -> Coloring:
     while True:
         signatures = {}
         old_partition = c.partition()
-        histograms.append(c.color_histogram())
+        histograms.append(c.colors_historgram.copy())
 
         for u in g.nodes:
             signatures[u] = signature(g, c, u)
